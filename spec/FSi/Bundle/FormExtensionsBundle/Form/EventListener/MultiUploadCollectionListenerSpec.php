@@ -62,18 +62,18 @@ class MultiUploadCollectionListenerSpec extends ObjectBehavior
         $formEvent->setData([
             0 => [
                 'another_field' => null,
-                'file' => null
+                'file' => [null]
             ],
             1 => [
                 'another_field' => null,
-                'file' => 'first_file'
+                'file' => ['first_file']
             ],
             2 => [
                 'another_field' => null,
-                'file' => 'single_file'
+                'file' => ['single_file']
             ],
             3 => [
-                'file' => 'second_file'
+                'file' => ['second_file']
             ]
         ])->shouldBeCalled();
 
